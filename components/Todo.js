@@ -1,7 +1,5 @@
 class Todo {
   constructor(data, selector) {
-    console.log(data);
-    console.log(selector);
     this._data = data;
     this._templateElement = document.querySelector(selector);
   }
@@ -13,7 +11,6 @@ class Todo {
 
     this._todoCheckboxEl.addEventListener("change", () => {
       this._data.completed = !this._data.completed;
-      console.log(this._data.completed);
     });
   }
 
@@ -44,6 +41,7 @@ class Todo {
         day: "numeric",
       })}`;
     }
+
     this._generateCheckboxEl();
     this._setEventListeners();
 

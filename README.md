@@ -30,4 +30,4 @@ This project was built using:
 
 This project is deployed on GitHub Pages:
 
-- (https://github.com/tripleten-com/se_project_todo-app.git)
+- https://atlaswacera-cyber.github.io/se_project_todo-app/
