@@ -68,6 +68,11 @@
   font-weight: 500;
   color: #f44;
   cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.todo__delete-btn:hover {
+  opacity: 0.6;
 }
 
 .todo__delete-btn::before {

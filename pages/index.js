@@ -27,6 +27,7 @@ const generateTodo = (data) => {
       if (deletedTodo.completed) {
         todoCounter.updateCompleted(false);
       }
+
       todoCounter.updateTotal(false);
     },
   );
@@ -34,12 +35,16 @@ const generateTodo = (data) => {
   return todo.getView();
 };
 
-const section = new Section({
+let section;
+
+const renderTodo = (item) => {
+  const todoElement = generateTodo(item);
+  section.addItem(todoElement);
+};
+
+section = new Section({
   items: initialTodos,
-  renderer: (item) => {
-    const todoElement = generateTodo(item);
-    section.addItem(todoElement);
-  },
+  renderer: renderTodo,
   containerSelector: ".todos__list",
 });
 
@@ -58,8 +63,7 @@ const addTodoPopup = new PopupWithForm("#add-todo-popup", (inputValues) => {
     completed: false,
   };
 
-  const todoElement = generateTodo(values);
-  section.addItem(todoElement);
+  renderTodo(values);
   todoCounter.updateTotal(true);
   addTodoPopup.close();
   formValidator.resetValidation();
