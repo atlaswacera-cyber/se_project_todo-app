@@ -23,12 +23,6 @@ class PopupWithForm extends Popup {
 
     this._formElement.addEventListener("submit", (evt) => {
       evt.preventDefault();
-
-      if (!this._formElement.checkValidity()) {
-        this._formElement.reportValidity();
-        return;
-      }
-
       this._handleFormSubmit(this._getInputValues());
     });
   }
