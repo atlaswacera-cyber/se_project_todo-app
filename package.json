@@ -1,0 +1,20 @@
+{
+  "name": "se_project_todo-app",
+  "version": "1.0.0",
+  "description": "This is a simple and interactive to-do list application that lets users create, view, complete, and delete tasks. It helps organize daily tasks in a clean and easy-to-use interface.",
+  "homepage": "https://github.com/atlaswacera-cyber/se_project_todo-app#readme",
+  "bugs": {
+    "url": "https://github.com/atlaswacera-cyber/se_project_todo-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atlaswacera-cyber/se_project_todo-app.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
